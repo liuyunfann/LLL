@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/lab3-2502-054-index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href=" " class="open-btn">打开弹窗</a >
+    <div id="loginBox">
+    <input type="radio" name="form-tab" id="login-radio" class="tab-radio" checked>
+    <input type="radio" name="form-tab" id="register-radio" class="tab-radio">
+    <div class="modalWrap">
+      <a href="#" class="close">×</a >
+      <div class="tabs-nav">
+        <label for="login-radio" class="tab-label">登录</label>
+        <label for="register-radio" class="tab-label">注册</label>
+      </div>
+      <div class="login-box">
+        <h3>登录</h3>
+        <div class="input-container">
+        <input type="text" id="loginUser" placeholder="请输入用户名" class="input-field">
+        <input type="password" id="loginPwd" placeholder="请输入密码" class="input-field">
+        </div>
+        <label class="agree">
+          <input type="checkbox" required>
+          我已阅读并同意
+          <a href="#privacyBox" class="link">《隐私协议》</a >
+        </label>
+        <button class="btn" onclick="loginCheck()">登录</button>
+        <div class="switch-link">
+          还没有账号？
+          <label for="register-radio" class="link">立即注册</label>
+        </div>
+      </div>
+      <div class="reg-box">
+        <h3>注册</h3>
+        <div class="input-container">
+        <input type="text" id="regUser" placeholder="请输入用户名" class="input-field">
+        <input type="password" id="regPwd" placeholder="请输入密码" class="input-field">
+        <input type="password" id="regPwd2" placeholder="请确认密码" class="input-field">
+        </div>
+        <label class="agree">
+          <input type="checkbox" required>
+          我已阅读并同意
+          <a href="#privacyBox" class="link">《隐私协议》</a >
+        </label>
+        <button class="btn" onclick="regSave()">注册</button>
+        <div class="switch-link">
+          已有账号？
+          <label for="login-radio" class="link">立即登录</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="privacyBox">
+    <div class="privacyWrap">
+      <a href="#loginBox" class="close">×</a >
+      <h3>隐私协议</h3>
+      <div class="content">
+        <p>1. 我们收集您的个人信息仅用于账号注册、登录验证和提供基础服务。</p >
+        <p>2. 我们承诺不会将您的个人信息出售、出租或分享给无关第三方。</p >
+        <p>3. 您的密码会经过加密存储，确保账户安全。</p >
+        <p>4. 您有权查看、修改或删除您的个人信息。</p >
+        <p>5. 我们会采取合理安全措施保护您的数据。</p >
+        <p>6. 未满18岁需在监护人指导下使用本服务。</p >
+        <p>7. 继续使用即表示您已阅读、理解并同意本协议全部内容。</p >
+      </div>
+    </div>
+  </div>
+    <div id="header">
+        <div class="logo">
+            <img src="img/2.1.png" alt="">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">购物车</a></li>
+                <li><a href="#loginBox">登录</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-bar">
+            <h3>图书分类</h3>
+            <ul>
+                <li><a href="#social">人文社科</a></li>
+                <li><a href="#literature">文学艺术</a></li>
+                <li><a href="#exam">教育考试</a></li>
+            </ul>
+        </div>
+        <div class="center-bar">
+            <div class="book-show">
+                <h3>图书</h3>
+                <div class="book-category" id="social">
+                    <h4>人文社科</h4>
+                    <div class="book-list">
+                        <div class="hover-box book-item">
+                            <img src="img/2.2.png" alt="">
+                            <div class="hover-info">
+                                <p>《民法典》</p>
+                                <p>￥48.00</p>
+                            </div>
+                        </div>
+                        <div class="book-item"><img src="img/2.3.png" alt=""></div>
+                        <div class="book-item"><img src="img/2.4.png" alt=""></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="book-category" id="literature">
+                    <h4>文学艺术</h4>
+                    <div class="book-list">
+                        <div class="book-item"><img src="img/2.5.png" alt=""></div>
+                        <div class="book-item"><img src="img/2.6.png" alt=""></div>
+                        <div class="book-item"><img src="img/2.7.png" alt=""></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="book-category" id="exam">
+                    <h4>教育考试</h4>
+                    <div class="book-list">
+                        <div class="book-item"><img src="img/2.8.png" alt=""></div>
+                        <div class="book-item"><img src="img/2.9.png" alt=""></div>
+                        <div class="book-item"><img src="img/2.10.png" alt=""></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="recommend">
+                <h3>热门推荐</h3>
+                <div class="book-item"><img src="img/2.11.png" alt=""></div>
+                <div class="book-item"><img src="img/2.12.png" alt=""></div>
+                <div class="book-item"><img src="img/2.13.png" alt=""></div>
+                <div style="clear: both;"></div>
+            </div>
+            <div class="newbook">
+                <h3>新书上市</h3>
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <tr>
+                        <th>书名</th>
+                        <th>作者</th>
+                        <th>价格</th>
+                    </tr>
+                    <tr>
+                        <td>飞鸟集</td>
+                        <td>泰戈尔</td>
+                        <td>￥12.40</td>
+                    </tr>
+                    <tr>
+                        <td>我与地坛</td>
+                        <td>史铁生</td>
+                        <td>￥29.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="right-bar">
+            <h3>促销信息</h3>
+            <p>满100减20</p>
+            <p>全场8折起</p>
+        </div>
+    </div>
+    <script>
+function regSave(){
+    let regCheckbox = document.querySelector('.reg-box .agree input[type="checkbox"]');
+    if(!regCheckbox.checked){
+    alert("请先阅读并同意隐私协议");
+    return;
+    }
+    let user = document.getElementById("regUser").value;
+    let pwd = document.getElementById("regPwd").value;
+    let pwd2 = document.getElementById("regPwd2").value;
+    if(pwd !== pwd2){
+        alert("两次密码不一致");
+        return;
+    }
+    localStorage.setItem("username",user);
+    localStorage.setItem("password",pwd);
+    alert("注册成功");
+}
+function loginCheck(){
+    let loginCheckbox = document.querySelector('.login-box .agree input[type="checkbox"]');
+    if(!loginCheckbox.checked){
+        alert("请先阅读并同意隐私协议");
+        return;
+    }
+    let inUser = document.getElementById("loginUser").value;
+    let inPwd = document.getElementById("loginPwd").value;
+    let saveUser = localStorage.getItem("username");
+    let savePwd = localStorage.getItem("password");
+    if(inUser===saveUser && inPwd===savePwd){
+        alert("登录成功");
+    }else{
+        alert("用户名或密码错误");
+    }
+}
+</script>
+</body>
+</html>
